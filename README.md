@@ -16,11 +16,11 @@ Callable interface:
 - bccRecipients: a js array containing all the email addresses for BCC field; can be null/empty
 - isHtml: a bool value indicating if the body is HTML or plain text
 - attachments: a js array containing all full paths to the files you want to attach; can be null/empty
-- attachmentsData: an Array of FileName-FileData array pairs, e.g. [['filename1','base64data1'],['filename2','base64data2']]
+- attachmentsData: a js array of fileName-fileData array pairs, e.g. [['filename1','base64data1'],['filename2','base64data2']]
 
 ## Special thanks ##
 
-I would like to say thanks to Guido Sabatini (https://github.com/phonegap/phonegap-plugins/blob/master/iOS/EmailComposerWithAttachments/) for the code we have (re)used and added more functionalities to.
+I would like to say thanks to Guido Sabatini (https://github.com/phonegap/phonegap-plugins/blob/master/iOS/EmailComposerWithAttachments/) for the code we have (re)used and added extra functionalities to.
 
 ## License ##
 
