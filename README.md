@@ -2,7 +2,7 @@
 
 Email Composer with Attachments allows for sending of emails with attachments. Modified from the original Phonegap plugin to accept attachment data directly from JavaScript, encoded in Base64.
 
-Callable interface:
+**Callable interface:**
 ```
 	window.plugins.emailComposer.showEmailComposerWithCallback(callback,subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments,attachmentsData);
 ```
