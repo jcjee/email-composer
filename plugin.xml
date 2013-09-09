@@ -20,6 +20,13 @@
     <engines>
         <engine name="cordova" version=">=2.3.0" />
     </engines>
+    
+    <!-- android -->
+    <platform name="android">
+
+        <source-file src="src/android/EmailComposer.java" target-dir="src/org/apache/cordova" />
+        
+    </platform>
 
     <!-- ios -->
     <platform name="ios">
@@ -38,4 +45,5 @@
         <framework src="MessageUI.framework" weak="true" />
         
     </platform>
+    
 </plugin>
