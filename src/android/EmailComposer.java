@@ -6,6 +6,10 @@
  * 
  * Guido Sabatini 2012
  *
+ * Version 1.3
+ *
+ * Jia Chang Jee 2013
+ *
  */
 
 package org.apache.cordova;
