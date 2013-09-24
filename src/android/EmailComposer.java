@@ -12,7 +12,7 @@
  *
  */
 
-package org.apache.cordova;
+package com.jcjee.plugins;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -24,7 +24,12 @@
     <!-- android -->
     <platform name="android">
 
-        <source-file src="src/android/EmailComposer.java" target-dir="src/org/apache/cordova" />
+        <!-- Cordova >= 2.3 -->
+        <config-file target="config.xml" parent="plugins">
+            <plugin name="EmailComposer" value="com.jcjee.plugins.EmailComposer"/>
+        </config-file>
+
+        <source-file src="src/android/EmailComposer.java" target-dir="src/com/jcjee/plugins" />
         
     </platform>
 
