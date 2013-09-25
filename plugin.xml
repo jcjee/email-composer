@@ -25,7 +25,7 @@
     <platform name="android">
 
         <!-- Cordova >= 2.3 -->
-        <config-file target="config.xml" parent="plugins">
+        <config-file target="res/xml/config.xml" parent="plugins">
             <plugin name="EmailComposer" value="com.jcjee.plugins.EmailComposer"/>
         </config-file>
 
