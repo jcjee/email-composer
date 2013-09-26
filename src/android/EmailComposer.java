@@ -16,7 +16,6 @@ package com.jcjee.plugins;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
@@ -174,13 +173,14 @@ public class EmailComposer extends CordovaPlugin {
 					String filedata = fileInformation.getString(1);
 					
 					byte[] fileBytes = Base64.decode(filedata, 0);
-					File filePath = new File(this.cordova.getContext().getCacheDir() + "/" + filename);
+					File filePath = new File(this.cordova.getActivity().getCacheDir() + "/" + filename);
 					FileOutputStream os = new FileOutputStream(filePath, true);
 					os.write(fileBytes);
 					os.flush();
 					os.close();
 					
-					Uri uri = Uri.fromFile(filePath);
+					// Uri uri = Uri.fromFile(filePath);
+					Uri uri = Uri.parse("content://" + EmailAttachmentProvider.AUTHORITY + "/" + filename);
 					uris.add(uri);
 				}
 				if (uris.size() > 0) {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.jcjee.plugins.emailcomposer"
+    id="com.phonegap.plugins.emailcomposer"
     version="1.3">
     
     <name>Email Composer with Attachments</name>
@@ -28,8 +28,13 @@
         <config-file target="res/xml/config.xml" parent="plugins">
             <plugin name="EmailComposer" value="com.jcjee.plugins.EmailComposer"/>
         </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="application">
+            <provider android:name="com.jcjee.plugins.EmailAttachmentProvider" android:authorities="com.jcjee.plugins.emailcomposer.provider"></provider>
+        </config-file>
 
         <source-file src="src/android/EmailComposer.java" target-dir="src/com/jcjee/plugins" />
+        <source-file src="src/android/EmailAttachmentProvider.java" target-dir="src/com/jcjee/plugins" />
         
     </platform>
 
