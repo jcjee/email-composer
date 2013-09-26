@@ -69,7 +69,7 @@ public class EmailAttachmentProvider extends ContentProvider {
 		Object[] row = new Object[projection.length];
 		long fileSize = 0;
 		
-		String fileLocation = getContext().getApplicationInfo().dataDir + File.separator + uri.getLastPathSegment();
+		String fileLocation = getContext().getCacheDir() + File.separator + uri.getLastPathSegment();
 		File tempFile = new File(fileLocation);
 		fileSize = tempFile.length();
 		
