@@ -164,7 +164,7 @@
     } else {
         [self returnWithCode:RETURN_CODE_EMAIL_NOTSENT];
     }
-    [mailComposer release];
+    //[mailComposer release];
 }
 
 
@@ -207,11 +207,16 @@
         return nil;
     CFStringRef pathExtension, type;
     // Get the UTI from the file's extension
-    pathExtension = (CFStringRef)extension;
+    pathExtension = (__bridge_retained CFStringRef)extension;
     type = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension, NULL);
+    CFRelease(pathExtension);
     
     // Converting UTI to a mime type
-   return (NSString *)UTTypeCopyPreferredTagWithClass(type, kUTTagClassMIMEType);
+    NSString *mimeType = (__bridge_transfer NSString *)UTTypeCopyPreferredTagWithClass(type, kUTTagClassMIMEType);
+    if (type != NULL)
+        CFRelease(type);
+    
+    return mimeType;
 }
 
 @end
