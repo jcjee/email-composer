@@ -300,12 +300,20 @@ char *NewBase64Encode(
 	char *outputBuffer =
 		NewBase64Encode([self bytes], [self length], true, &outputLength);
 	
+#if __has_feature(objc_arc)
+	NSString *result =
+		[[NSString alloc]
+			initWithBytes:outputBuffer
+			length:outputLength
+			encoding:NSASCIIStringEncoding];
+#else
 	NSString *result =
 		[[[NSString alloc]
 			initWithBytes:outputBuffer
 			length:outputLength
 			encoding:NSASCIIStringEncoding]
 		autorelease];
+#endif
 	free(outputBuffer);
 	return result;
 }
@@ -317,12 +325,20 @@ char *NewBase64Encode(
 	char *outputBuffer =
     NewBase64Encode([self bytes], [self length], separateLines, &outputLength);
 	
+#if __has_feature(objc_arc)
+	NSString *result =
+    [[NSString alloc]
+      initWithBytes:outputBuffer
+      length:outputLength
+      encoding:NSASCIIStringEncoding];
+#else
 	NSString *result =
     [[[NSString alloc]
       initWithBytes:outputBuffer
       length:outputLength
       encoding:NSASCIIStringEncoding]
      autorelease];
+#endif
 	free(outputBuffer);
 	return result;
 }
