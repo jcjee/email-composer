@@ -15,7 +15,9 @@
     
     <license>MIT</license>
     
-    <asset src="www/EmailComposer.js" target="EmailComposer.js" />
+   <js-module src="EmailComposer.js" name="EmailComposer">
+        <clobbers target="EmailComposer" />
+    </js-module>
 
     <engines>
         <engine name="cordova" version=">=3.0.0" />
