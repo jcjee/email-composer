@@ -15,7 +15,7 @@
     
     <license>MIT</license>
     
-   <js-module src="EmailComposer.js" name="EmailComposer">
+   <js-module src="www/EmailComposer.js" name="EmailComposer">
         <clobbers target="EmailComposer" />
     </js-module>
 
