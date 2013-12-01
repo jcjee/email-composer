@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.phonegap.plugins.emailcomposer"
-    version="1.4.1">
+    id="com.jcjee.plugins.emailcomposer"
+    version="1.4.2">
     
     <name>Email Composer with Attachments</name>
     
@@ -15,7 +15,9 @@
     
     <license>MIT</license>
     
-    <asset src="www/EmailComposer.js" target="EmailComposer.js" />
+    <js-module src="www/EmailComposer.js" name="EmailComposer">
+        <clobbers target="EmailComposer" />
+    </js-module>
 
     <engines>
         <engine name="cordova" version=">=3.0.0" />
