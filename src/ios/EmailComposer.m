@@ -160,7 +160,7 @@
     }
     
     if (mailComposer != nil) {
-        [self.viewController presentModalViewController:mailComposer animated:YES];
+        [self.viewController presentViewController:mailComposer animated:YES completion:nil];
     } else {
         [self returnWithCode:RETURN_CODE_EMAIL_NOTSENT];
     }
@@ -192,7 +192,7 @@
             break;
     }
 	
-    [controller dismissModalViewControllerAnimated:YES];
+    [controller dismissViewControllerAnimated:YES completion:nil];
     [self returnWithCode:webviewResult];
 }
 
