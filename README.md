@@ -4,11 +4,17 @@ Email Composer with Attachments allows for sending of emails with attachments. M
 
 The original source + commit history is no longer maintained.
 You can find it here:
+
 https://github.com/phonegap/phonegap-plugins/tree/DEPRECATED/iPhone/EmailComposer
+
 and here :
+
 https://github.com/phonegap/phonegap-plugins/tree/DEPRECATED/iOS/EmailComposer
+
 and here :
+
 https://github.com/phonegap/phonegap-plugins/tree/DEPRECATED/iOS/EmailComposerWithAttachments
+
 
 **Callable interface:**
 ```
