@@ -174,7 +174,7 @@ public class EmailComposer extends CordovaPlugin {
 					
 					byte[] fileBytes = Base64.decode(filedata, 0);
 					File filePath = new File(this.cordova.getActivity().getCacheDir() + "/" + filename);
-					FileOutputStream os = new FileOutputStream(filePath, true);
+					FileOutputStream os = new FileOutputStream(filePath, false);
 					os.write(fileBytes);
 					os.flush();
 					os.close();
