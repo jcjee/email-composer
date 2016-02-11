@@ -198,7 +198,7 @@
 
 // Call the callback with the specified code
 -(void) returnWithCode:(int)code {
-    [self writeJavascript:[NSString stringWithFormat:@"window.plugins.emailComposer._didFinishWithResult(%d);", code]];
+    [self.commandDelegate evalJs:[NSString stringWithFormat:@"window.plugins.emailComposer._didFinishWithResult(%d);", code]];
 }
 
 // Retrieve the mime type from the file extension
